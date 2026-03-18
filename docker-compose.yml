@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: bizcollab-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  bizcollab-app:
+    build: .
+    container_name: bizcollab-app
+    ports:
+      - "8888:8888"
+    depends_on:
+      - mongodb
+    environment:
+      - DATABASE=mongodb://mongodb:27017/BizCollab_core
+      - JWT_SECRET=change-this-to-a-secure-secret-in-production
+      - NODE_ENV=production
+      - PORT=8888
+    restart: always
+
+volumes:
+  mongodb_data:

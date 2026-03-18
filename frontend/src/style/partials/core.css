@@ -1,0 +1,257 @@
+:root {
+  --primary-color: #3B82F6;
+  --primary-hover: #2563EB;
+  --success-color: #10B981;
+  --warning-color: #F59E0B;
+  --error-color: #EF4444;
+  --bg-page: #000000;
+  --bg-card: #000000;
+  --bg-input: #000000;
+  --text-main: #FFFFFF;
+  --text-body: #FFFFFF;
+  --text-muted: rgba(255, 255, 255, 0.55);
+  --border-color: #FFFFFF;
+  --panel-elevated: linear-gradient(180deg, rgba(2, 6, 23, 0.96) 0%, rgba(0, 0, 0, 0.99) 100%);
+  --panel-secondary: linear-gradient(180deg, rgba(15, 23, 42, 0.96) 0%, rgba(2, 6, 23, 0.98) 100%);
+  --panel-accent: linear-gradient(135deg, rgba(15, 23, 42, 1) 0%, rgba(59, 130, 246, 1) 100%);
+  --panel-user-bubble: linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(29, 78, 216, 0.95) 100%);
+  --panel-assistant-bubble: linear-gradient(180deg, rgba(15, 23, 42, 0.94) 0%, rgba(2, 6, 23, 0.98) 100%);
+  --panel-border-soft: rgba(255, 255, 255, 0.1);
+  --panel-border-muted: rgba(255, 255, 255, 0.08);
+  --panel-border-accent: rgba(96, 165, 250, 0.22);
+  --panel-tag-bg: rgba(59, 130, 246, 0.12);
+  --panel-tag-text: #BFDBFE;
+  --panel-tag-border: rgba(96, 165, 250, 0.22);
+  --panel-text-subtle: rgba(255, 255, 255, 0.62);
+  --panel-text-faint: rgba(255, 255, 255, 0.45);
+  --panel-blue-glow: 0 14px 28px rgba(29, 78, 216, 0.28);
+  --panel-blue-glow-strong: 0 12px 28px rgba(29, 78, 216, 0.28);
+  --panel-shadow-deep: 0 28px 80px rgba(2, 6, 23, 0.68);
+
+  --border-radius-lg: 12px;
+  --border-radius-md: 8px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+  --shadow-soft: 0 4px 24px 0 rgba(0, 0, 0, 0.6);
+  --font-mono: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.hiddenLabel {
+  opacity: 0;
+  color: #fff;
+}
+.centerAbsolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 38px;
+  margin-left: -16px;
+  margin-top: -19px;
+}
+.whiteBox {
+  background: var(--bg-card);
+  width: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-body);
+  border: 1px solid var(--border-color);
+}
+.shadow {
+  box-shadow: var(--shadow-sm);
+}
+.shadow:hover {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  transform: translateY(-4px) scale(1.01);
+}
+.line {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  width: 100%;
+  margin: 5px auto;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.pad5 {
+  padding: 5px;
+}
+.pad10 {
+  padding: 10px;
+}
+.pad15 {
+  padding: 15px;
+}
+.pad20 {
+  padding: 20px;
+}
+.pad25 {
+  padding: 25px;
+}
+.pad30 {
+  padding: 30px;
+}
+.pad33 {
+  padding: 35px;
+}
+.pad40 {
+  padding: 40px;
+}
+
+.mrg5 {
+  margin: 5px;
+}
+.mrg10 {
+  margin: 10px;
+}
+.mrg15 {
+  margin: 15px;
+}
+.mrg20 {
+  margin: 20px;
+}
+.mrg25 {
+  margin: 20px;
+}
+.mrg30 {
+  margin: 20px;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.center {
+  justify-content: center;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.space5 {
+  height: 5px;
+  width: 100%;
+  display: block;
+}
+.space10 {
+  height: 10px;
+  width: 100%;
+  display: block;
+}
+.space20 {
+  height: 20px;
+  width: 100%;
+  display: block;
+}
+.space30 {
+  height: 30px;
+  width: 100%;
+  display: block;
+}
+.space40 {
+  height: 40px;
+  width: 100%;
+  display: block;
+}
+.space50 {
+  height: 50px;
+  width: 100%;
+  display: block;
+}
+.space60 {
+  height: 60px;
+  width: 100%;
+  display: block;
+}
+.space70 {
+  height: 70px;
+  width: 100%;
+  display: block;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.layoutPadding {
+  position: relative;
+  padding: 50px 40px;
+}
+
+.dashboardSpacing {
+  padding: 30px 40px;
+  margin: 70px auto;
+}
+
+@media only screen and (min-width: 1100px) {
+  .hidden-lg {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .layoutPadding {
+    padding: 50px 20px;
+  }
+
+  .dashboardSpacing {
+    padding: 30px 20px;
+    margin: 70px auto;
+  }
+}
+
+/* Data-Dense / AI Command Center Utility */
+.floating-command-center {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(12px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08) !important;
+  border-radius: 99px !important;
+}
+
+.tech-mono {
+  font-family: var(--font-mono) !important;
+  letter-spacing: -0.2px !important;
+}
+
+.ai-accent-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+  display: inline-block;
+}
+

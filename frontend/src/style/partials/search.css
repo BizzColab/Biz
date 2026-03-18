@@ -1,0 +1,134 @@
+/* Ant Design AutoComplete & Select Search Wrapper Fixes */
+/* This removes any redundant outer frames/boxes that wrap the search component */
+.ant-select-auto-complete,
+.ant-select-auto-complete .ant-select-selector,
+.search-input-premium.ant-select-customize-input .ant-select-selector {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Base style for the inner input (the rounded 'button' bar) */
+.midnight-input {
+  background: #000000 !important;
+  border: 1px solid #232426 !important; /* Updated border color */
+  border-radius: 999px !important;
+  color: #FFFFFF !important; /* Restored white text for readability */
+  padding: 12px 24px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+
+.midnight-input:hover {
+  background: #000000 !important;
+  border-color: #232426 !important;
+}
+
+.midnight-input:focus, .midnight-input-focused {
+  border-color: #232426 !important;
+  background: #000000 !important;
+  box-shadow: 0 0 0 1px rgba(35, 36, 38, 0.2) !important;
+}
+
+/* For Ant Design Select-based search (e.g. AutoCompleteAsync) */
+.search-input-premium:not(.ant-select-customize-input) .ant-select-selector {
+  background: #000000 !important;
+  border: 1px solid #232426 !important; /* Updated border color */
+  border-radius: 999px !important;
+  color: #FFFFFF !important;
+  height: 48px !important;
+  padding: 8px 16px !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+}
+
+.search-input-premium:hover .ant-select-selector {
+  border-color: #232426 !important;
+}
+
+/* Focused rings and borders */
+.search-input-premium .ant-select-selector:focus,
+.search-input-premium .ant-select-selector:active,
+.search-input-premium.ant-select-focused .ant-select-selector {
+  border-color: #232426 !important;
+  background: #000000 !important;
+  box-shadow: 0 0 0 1px rgba(35, 36, 38, 0.2) !important;
+}
+
+
+
+
+/* Hide Ant Design's own focus ring */
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  box-shadow: none !important;
+}
+
+
+
+.search-input-premium .ant-select-selection-placeholder {
+  color: #FFFFFF !important;
+  line-height: 32px !important;
+}
+
+
+.search-input-premium .ant-select-selection-item {
+    color: #f8fafc !important;
+    line-height: 32px !important;
+}
+
+/* Dropdown / Popup Styles */
+.search-popup-midnight {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid #232426 !important;
+
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  padding: 4px !important;
+}
+
+.search-popup-midnight .ant-select-item {
+  color: #94a3b8 !important;
+  padding: 10px 16px !important;
+  border-radius: 8px !important;
+  margin: 2px 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.search-popup-midnight .ant-select-item-option-content {
+    font-weight: 500 !important;
+}
+
+.search-popup-midnight .ant-select-item-option-selected {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+}
+
+.search-popup-midnight .ant-select-item-option-active {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #f8fafc !important;
+}
+
+.searching-loader {
+  padding: 12px;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 14px;
+}
+
+.search-icon-glow {
+  color: #64748b;
+  margin-right: 8px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.ant-select-focused .search-icon-glow, .midnight-input:focus .search-icon-glow {
+  color: #f8fafc;
+}
+
