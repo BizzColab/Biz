@@ -28,6 +28,9 @@ const { initRedis } = require('./setup/redis');
 const app = require('./app');
 app.set('port', process.env.PORT || 8888);
 
+const socketOrigin =
+  process.env.NODE_ENV === 'production' ? process.env.FRONTEND_URL || true : 'http://localhost:3000';
+
 initRedis().then(() => {
   const server = app.listen(app.get('port'), () => {
     console.log(`Express running on PORT: ${server.address().port}`);
@@ -35,7 +38,7 @@ initRedis().then(() => {
 
   const io = require('socket.io')(server, {
   cors: {
-    origin: process.env.NODE_ENV === 'production' ? process.env.FRONTEND_URL : "http://localhost:3000",
+    origin: socketOrigin,
     methods: ["GET", "POST"],
     credentials: true,
   },

@@ -20,6 +20,9 @@ const tenantMiddleware = require('./middlewares/tenantMiddleware');
 // Initialize app
 const app = express();
 
+const corsOrigin =
+  process.env.NODE_ENV === 'production' ? process.env.FRONTEND_URL || true : true;
+
 // Middlewares
 app.use(helmet({
   crossOriginResourcePolicy: false, // Allow cross-origin images/files
@@ -27,7 +30,7 @@ app.use(helmet({
 }));
 app.use(morgan('dev'));
 app.use(cors({ 
-  origin: process.env.NODE_ENV === 'production' ? process.env.FRONTEND_URL : true, 
+  origin: corsOrigin,
   credentials: true 
 }));
 app.use(cookieParser());
