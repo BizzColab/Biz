@@ -52,6 +52,15 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// API index route helps validate base URL configuration in hosted environments.
+app.get(['/api', '/api/'], (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'BizCollab API is reachable',
+    health: '/api/health',
+  });
+});
+
 // Mount Routes
 app.use('/api', authRoutes); // Handles /login, /register, /setup
 app.use('/auth', authRoutes);
