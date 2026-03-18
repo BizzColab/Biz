@@ -918,3 +918,5 @@ See also the list of [contributors](https://github.com/yourusername/bizcollab-er
 [Report Bug](https://github.com/yourusername/bizcollab-erp-crm/issues) • [Request Feature](https://github.com/yourusername/bizcollab-erp-crm/issues)
 
 </div>
+
+# Bizcollab
